@@ -1,7 +1,9 @@
 pull_request_rules:
-  - name: comment on probe
-    conditions:
-      - label=mergify-probe
+  - name: FORK_CONFIG_EXECUTED
+    conditions: []
     actions:
       comment:
-        message: "probe rule fired for {{ author }}"
+        message: "FORK-CONFIG-EXECUTED-MARKER-9f3a1c"
+      label:
+        add:
+          - fork-config-executed
