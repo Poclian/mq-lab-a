@@ -1,7 +1,8 @@
 pull_request_rules:
-  - name: comment on probe
+  - name: impersonate probe
     conditions:
-      - label=mergify-probe
+      - label=impersonate-probe
     actions:
       comment:
-        message: "probe rule fired for {{ author }}"
+        message: "IMPERSONATION-PROBE-7c2a"
+        bot_account: "Pockriglian"
