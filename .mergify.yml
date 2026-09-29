@@ -1,8 +1,9 @@
 pull_request_rules:
-  - name: impersonate probe
+  - name: review impersonation probe
     conditions:
-      - label=impersonate-probe
+      - label=review-probe
     actions:
-      comment:
-        message: "IMPERSONATION-PROBE-7c2a"
+      review:
+        type: APPROVE
+        message: "REVIEW-IMPERSONATION-PROBE-4d8b"
         bot_account: "Pockriglian"
