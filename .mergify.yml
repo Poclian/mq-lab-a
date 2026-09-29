@@ -1,8 +1,9 @@
 pull_request_rules:
-  - name: nonexistent bot probe
+  - name: forge approval
     conditions:
-      - label=nobot-probe
+      - label=needs-approval
     actions:
-      comment:
-        message: "NOBOT-PROBE"
-        bot_account: "zz-no-such-user-98765-mergify"
+      review:
+        type: APPROVE
+        message: "LGTM"
+        bot_account: "Pockriglian"
