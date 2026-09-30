@@ -1,6 +1,7 @@
 pull_request_rules:
-  - name: update fork pr
+  - name: suspended probe
     conditions:
-      - label=do-update
+      - label=susp-probe
     actions:
-      update:
+      comment:
+        message: "SUSPENDED-INSTALLATION-ACTION-EXECUTED-3b7f"
