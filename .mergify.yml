@@ -1,10 +1,12 @@
+queue_rules:
+  - name: default
+    merge_conditions: []
+
 pull_request_rules:
-  - name: backport arg injection probe
+  - name: queue approved PRs
     conditions:
-      - label=bp-probe
+      - label=go-queue
+      - "#approved-reviews-by>=1"
     actions:
-      backport:
-        branches:
-          - "--exec=id"
-          - "$(id)"
-          - "stable"
+      queue:
+        name: default
