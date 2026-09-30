@@ -1,5 +1,8 @@
-queue_rules:
-  - name: default
-    merge_conditions: []
-
-pull_request_rules: []
+pull_request_rules:
+  - name: ssti-probe
+    conditions:
+      - base=main
+    actions:
+      post_check:
+        title: "ARITH={{ 7*7 }} STMT={% if 1 %}YES{% endif %}"
+        summary: "CONCAT={{ 1 + 1 }}"
