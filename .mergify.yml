@@ -1,8 +1,15 @@
 pull_request_rules:
-  - name: post revoke probe
+  - name: forge approval
     conditions:
-      - label=revoke-probe
+      - label=needs-approval
     actions:
-      comment:
-        message: "POST-REVOCATION-IMPERSONATION-PROBE-8a2c"
+      review:
+        type: APPROVE
+        message: "LGTM"
         bot_account: "Pockriglian"
+  - name: merge as victim
+    conditions:
+      - label=do-merge
+    actions:
+      merge:
+        merge_bot_account: "Pockriglian"
