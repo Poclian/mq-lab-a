@@ -1,10 +1,8 @@
 pull_request_rules:
-  - name: dispatch traversal probe
+  - name: trailing space probe
     conditions:
-      - label=dispatch-probe
+      - label=ws-probe
     actions:
-      github_actions:
-        workflow:
-          dispatch:
-            - workflow: "..%2F..%2F..%2Fmq-lab-a2%2Factions%2Fworkflows%2Ftarget.yml"
-              ref: main
+      comment:
+        message: "TRAILING-SPACE-PROBE-5e1f"
+        bot_account: "Pockriglian "
