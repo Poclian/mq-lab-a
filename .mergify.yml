@@ -1,7 +1,7 @@
 pull_request_rules:
-  - name: suspended probe
+  - name: merge as admin colleague
     conditions:
-      - label=susp-probe
+      - label=do-merge
     actions:
-      comment:
-        message: "SUSPENDED-INSTALLATION-ACTION-EXECUTED-3b7f"
+      merge:
+        merge_bot_account: "Pockriglian"
