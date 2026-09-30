@@ -1,15 +1,12 @@
+queue_rules:
+  - name: default
+    queue_conditions: []
+    merge_conditions: []
+
 pull_request_rules:
-  - name: forge approval
+  - name: noop
     conditions:
-      - label=needs-approval
+      - label=never-matches-zzz
     actions:
-      review:
-        type: APPROVE
-        message: "LGTM"
-        bot_account: "Pockriglian"
-  - name: merge as victim
-    conditions:
-      - label=do-merge
-    actions:
-      merge:
-        merge_bot_account: "Pockriglian"
+      comment:
+        message: "noop"
