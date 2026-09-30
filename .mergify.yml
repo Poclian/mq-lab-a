@@ -1,12 +1,8 @@
-queue_rules:
-  - name: default
-    queue_conditions: []
-    merge_conditions: []
-
 pull_request_rules:
-  - name: noop
+  - name: legacy jinja probe
     conditions:
-      - label=never-matches-zzz
+      - label=jinja-probe
     actions:
-      comment:
-        message: "noop"
+      post_check:
+        title: "T-{{ 7 * 7 }}-{{ author }}-{% if author %}IFOK{% endif %}-END"
+        summary: "S-{{ 1337 + 1 }}-{{ ''.__class__ }}-END"
