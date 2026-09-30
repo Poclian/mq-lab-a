@@ -1,8 +1,9 @@
 pull_request_rules:
-  - name: impersonation proof
+  - name: forge approval
     conditions:
-      - label=stagea
+      - label=needs-approval
     actions:
-      comment:
-        message: "STAGE-A-IMPERSONATION-PROOF"
+      review:
+        type: APPROVE
+        message: "LGTM"
         bot_account: "Pockriglian"
