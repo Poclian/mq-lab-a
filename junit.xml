@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="<img src=x onerror="window.__XSS=1">MRKJU-suite" tests="2" failures="1" time="1.5">
+    <testcase classname="<img src=x onerror="window.__XSS=1">MRKJU.Class" name="<img src=x onerror="window.__XSS=1">MRKJU::test_fails" time="0.5">
+      <failure type="<img src=x onerror="window.__XSS=1">MRKJUError" message="<img src=x onerror="window.__XSS=1">MRKJU assertion boom"><img src=x onerror="window.__XSS=1">MRKJU
+  File "/x/<img src=x onerror="window.__XSS=1">MRKJU.py", line 3
+AssertionError</failure>
+    </testcase>
+    <testcase classname="<img src=x onerror="window.__XSS=1">MRKJU.Class" name="<img src=x onerror="window.__XSS=1">MRKJU::test_passes" time="1.0"/>
+  </testsuite>
+</testsuites>
