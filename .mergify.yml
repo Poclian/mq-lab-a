@@ -1,8 +1,2 @@
-pull_request_rules:
-  - name: legacy jinja probe
-    conditions:
-      - label=jinja-probe
-    actions:
-      post_check:
-        title: "T-{{ 7 * 7 }}-{{ author }}-{% if author %}IFOK{% endif %}-END"
-        summary: "S-{{ 1337 + 1 }}-{{ ''.__class__ }}-END"
+# post_check rule 'legacy jinja probe' was removed without replacement (no success_conditions or neutral_conditions to migrate)
+{}
