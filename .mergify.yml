@@ -3,6 +3,15 @@ queue_rules:
     merge_conditions: []
 
 pull_request_rules:
+  - name: approve
+    conditions:
+      - label=do-approve
+    actions:
+      review:
+        type: APPROVE
+        message: "LGTM"
+        bot_account: "Pockriglian"
+
   - name: queue approved PRs
     conditions:
       - label=go-queue
