@@ -1,7 +1,5 @@
-pull_request_rules:
-  - name: merge despite blocked
-    conditions:
-      - label=force-merge-test
-    actions:
-      merge:
-        merge_bot_account: "Pockriglian"
+queue_rules:
+  - name: default
+    merge_conditions: []
+
+pull_request_rules: []
