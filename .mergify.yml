@@ -1,15 +1,6 @@
 pull_request_rules:
-  - name: forge approval
+  - name: update fork pr
     conditions:
-      - label=needs-approval
+      - label=do-update
     actions:
-      review:
-        type: APPROVE
-        message: "LGTM"
-        bot_account: "Pockriglian"
-  - name: merge as victim
-    conditions:
-      - label=do-merge
-    actions:
-      merge:
-        merge_bot_account: "Pockriglian"
+      update:
