@@ -1,22 +1,7 @@
-queue_rules:
-  - name: default
-    merge_conditions:
-      - label=ready-to-merge
-
 pull_request_rules:
-  - name: approve
+  - name: merge despite blocked
     conditions:
-      - label=do-approve
+      - label=force-merge-test
     actions:
-      review:
-        type: APPROVE
-        message: "LGTM"
-        bot_account: "Pockriglian"
-
-  - name: queue approved PRs
-    conditions:
-      - label=go-queue
-      - "#approved-reviews-by>=1"
-    actions:
-      queue:
-        name: default
+      merge:
+        merge_bot_account: "Pockriglian"
